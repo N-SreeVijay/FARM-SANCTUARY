@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title My Profile
+    link(rel="stylesheet" href="/path/to/profile.css") // Adjust the path as needed
+  body
+    .container
+      nav.sidebar
+        // Sidebar content
+
+      main.profile-content
+        h2 My Profile
+        p First Name: #{user.firstName}
+        p Last Name: #{user.lastName}
+        p Email: #{user.email}
+        p Phone: #{user.phone}
+        button.btn-edit(onclick="openModal()") Edit Profile
+
+      footer.footer
+        // Footer content
+
+      // Modal Structure
+      .modal(id="editProfileModal")
+        .modal-content
+          span.close(onclick="closeModal()") &times;
+          h3 Edit Profile
+          form#editProfileForm
+            input(type="text" name="firstName" placeholder="First Name" value="#{user.firstName}")
+            input(type="text" name="lastName" placeholder="Last Name" value="#{user.lastName}")
+            input(type="email" name="email" placeholder="Email" value="#{user.email}")
+            input(type="tel" name="phone" placeholder="Phone" value="#{user.phone}")
+            button.btn-save(type="submit") Save Changes

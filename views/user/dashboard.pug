@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title My Profile
+    link(rel="stylesheet" href="/assests/css/profile.css") 
+  body
+    .container
+      nav.sidebar
+        ul
+          li
+            a(href="/dashboard") Dashboard
+          li
+            a(href="/my-bookings") My Bookings
+          li
+            a(href="/donate") Make a Donation
+          li
+            a(href="/sponsorships") Animal Sponsorship
+          li
+            a(href="/subscriptions") Subscription Preferences
+          li
+            a(href="/support") Support
+          li
+            a(href="/profile") My Profile
+          li
+            a(href="/index") Logout
+
+      main.profile-content
+        h2 My Profile
+        p Name: #{user.name}
+        p Email: #{user.email}
+        p Mobile: #{user.mobile}
+        p Date of Birth: #{user.dob}
+        button.btn-edit Edit Profile
+
+      footer.footer
+        div.quick-links
+          h3 Quick Links
+          ul
+            li
+              a(href="/") Home
+            li
+              a(href="/about") About Us
+            li
+              a(href="/services") Services
+            li
+              a(href="/contact") Contact
+        div.follow-us
+          h3 Follow Us
+          a(href="#") Facebook
+          a(href="#") Twitter
+          a(href="#") Instagram
+        div.subscribe
+          h3 Subscribe to Our Newsletter
+          form
+            input(type="email" placeholder="Enter your email")
+            button.btn-subscribe Subscribe
